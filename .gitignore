@@ -84,11 +84,11 @@ celerybeat-schedule
 # Environments
 .env
 .venv
+.usr
 env/
 venv/
-ENV/
-.usr
 usr/
+ENV/
 env.bak/
 venv.bak/
 
