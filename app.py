@@ -122,4 +122,4 @@ def send_email(name_hash, message_hash):
 
 if __name__ == "__main__":
     # run the app
-    app.run(debug=True)
+    app.run(debug=False)
