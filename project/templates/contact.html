@@ -1,0 +1,25 @@
+{% extends 'index.html'%} {% from 'bootstrap5/form.html' import render_form %}
+{%block title%}Contact{%endblock%}
+{% block content %}
+<!-- Contact Section-->
+<section class="section py-5 my-5 bg-white" aria-describedby="titleEx6">
+  <div class="container py-5 px-5 mb-5 mt-5 bg-white">
+    <!-- Contact Section Heading-->
+    <h2 id="contact_title"
+      class="page-section-heading text-center text-uppercase text-secondary mb-0"
+    >
+      Contact Me
+    </h2>
+    <br />
+    <!-- Contact Section Form-->
+    <div clas="p-2 m-2 bg-white text-dark">
+        {{ render_form(form) }}
+    <div>
+    
+
+  
+
+  
+  </div>
+</section>
+{% endblock content%}

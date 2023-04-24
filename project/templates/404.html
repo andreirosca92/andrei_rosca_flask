@@ -1,0 +1,16 @@
+{% extends "index.html" %} 
+<!-- Exports header and navbar from index.html
+     or any file you want-->
+
+{%block title %}Page Not Found {% endblock%} 
+{%block content%}
+    <section class="jumbotron text-dark bg-white pt-5 mb-5 d-flex flex-column align-items-center" id="error_page">
+      <div class="pt-5 mb-5">
+        <h1 class="display-2 p-3 mb-5">Page not Found</h1>
+        <div class="d-flex flex-column pt-5 mb-5">
+          <p class="p-3 display-6 mb-5">Oops! Looks like the page doesn't exist anymore</p>
+          <a class="p-3 display-6 mb-5" href="{{ url_for('index') }}"><p class="display-6">Click Here</a>To go to the Home Page</p>
+        </div>
+      </div>
+    </section>
+{% endblock content%}

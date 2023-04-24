@@ -1,0 +1,95 @@
+{%extends 'index.html'%} {%block content %}
+<!-- My Info -->
+<main class="m-auto">
+  <section id="fixed-article">
+    <div class="card">
+      <div class="img-bx">
+        <img
+          src="{{url_for('static',filename='img/andrei_rosca_foto.jpg')}}"
+          alt="Andrei image"
+        />
+      </div>
+      <div class="content">
+        <div class="detail">
+          <h2>Andrei Rosca<br /><span>FULL STACK DEVELOPER</span></h2>
+          <ul class="sci">
+            <li>
+              <a href="https://it-it.facebook.com/"
+                ><img
+                  class="img-fluid"
+                  src="{{url_for('static',filename='assets/icons/icons8-facebook-50.png')}}"
+                  alt="facebook account"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/andreir27174351?ref_src=twsrc%5Etfw"
+                class="twitter-follow-button"
+                data-show-count="false"
+                ><img
+                  class="img-fluid"
+                  src="{{url_for('static',filename='assets/icons/icons8-twitter-50.png')}}"
+                  alt="twitter account"
+              /></a>
+            </li>
+            <li>
+              <a href="https://github.com/andreirosca92"
+                ><img
+                  class="img-fluid"
+                  src="{{url_for('static',filename='assets/icons/icons8-github-60.png')}}"
+                  alt="github account"
+              /></a>
+            </li>
+            <li>
+              <a href="https://gitlab.com/andreirosca92"
+                ><img
+                  class="img-fluid"
+                  src="{{url_for('static',filename='assets/icons/icons8-gitlab-48.png')}}"
+                  alt="gitlab account"
+              /></a>
+            </li>
+            <li>
+              <a href="https://call.whatsapp.com/voice/XjXguaQfovvaqHSJyfFOHV"
+                ><img
+                  class="img-fluid"
+                  src="{{url_for('static',filename='assets/icons/whatsapp_64.png')}}"
+                  alt="whatsapp account"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section-->
+  <section class="content-section" id="portfolio">
+    <div class="section-wrapper container flex-container">
+      <h2 class="section-title">PORTFOLIO</h2>
+      <div
+        class="article-list column-sm flex-container align-center justify-center space-between column-sm"
+      >
+        <article class="post flex-container">
+          <div class="img-container">
+            <img
+              class="img"
+              src="{{url_for('static', filename='img/blog_CSS.png')}}"
+              alt="blog in CSS"
+            />
+          </div>
+        </article>
+        <article class="post flex-container">
+          <div class="img-container">
+            <img
+              class="img"
+              src="{{url_for('static',filename='img/dashboard.png')}}"
+              alt="dashboard in Tailwind"
+            />
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock content%}

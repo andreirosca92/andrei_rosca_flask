@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+{%block title%}About{%endblock%}
+{% block content %}
+
+  <!-- About Section-->
+<section class="section py-4  m-auto bg-white d-flex justify-content-center" aria-describedby="titleEx6">
+  <div class="section-content m-5">
+    
+    <div class="container py-2 m-5">
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <h2 class="mb-5 font-weight-bold" id="about-title">Who I am?</h2>
+        </div>
+      </div>
+      <div class="row gy-2">
+        <div class="col-12">
+          <div class="card shadow">
+            <div class="card-body">
+              <p class="card-text font-serif font-weight-normal" id="about_text">
+                Hi all! My name is Andrei and I'm a software developer from Verona, Italy.
+                I am a Python enthusiast. I love programming projects in the field of Artificial Intelligence and Machine Learning, 
+                Data Science and much more. 
+                I have experimented with many programming languages such as Dart, Java, PHP, Javascript, C, C++, R. 
+                I think Javascript and Python will be important for many years because they solve so many problems in the web and sub-fields of Artificial Intelligence.
+                My favorite quote in life is from Robinson Cano: "You never stop learning. You learn something new every day”.
+                Thank you for your time.
+              </p>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+      <div class="p-2 my-5 d-flex justify-content-center">
+        <div class="btn-example">
+              <!-- About Section Button-->
+            <button id="button_cv"type="button" class="btn btn-primary"><a class="label label-primary disabled-link" href={{url_for('static',filename="/pdf/dummy.pdf")}} target="_blank"  style="margin-right: 5px;">Download my CV</a></button>
+          
+        </div>
+      </div>
+    </div>
+   
+  </div>
+</section>
+
+{% endblock content %}
+ 

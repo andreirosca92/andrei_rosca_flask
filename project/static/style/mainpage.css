@@ -1,0 +1,1002 @@
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --black1: #101010;
+  --orange1: #ee660c;
+}
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 300;
+  background-color: #212529;
+}
+main {
+  background: linear-gradient(#141714, #d0d3ce 45%, #fff 45%, #fff 100%);
+}
+#fixed-article {
+  margin-top: 56px;
+  margin-bottom: 56px;
+}
+.container {
+  max-width: 1140px;
+  margin: auto;
+  width: calc(100% - 48px);
+}
+
+/* molto usati */
+.flex-container {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+.justify-left {
+  justify-content: left;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 10px;
+  background: rgba(148, 144, 144, 0.1);
+  border-top: 1px solid rgba(26, 24, 24, 0.5);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.img-bx {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  top: 100px;
+}
+.img-bx img {
+  object-fit: contain;
+  width: 140%;
+  height: 140%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  opacity: 0.9;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border: 3px solid rgb(55, 58, 55);
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 30px;
+}
+
+.content .detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.content .detail h2 {
+  color: #100909;
+  font-size: 3.5em;
+  font-weight: bolder;
+}
+
+.content .detail h2 span {
+  font-size: 1.2em;
+  color: var(--orange1);
+  font-weight: bold;
+}
+
+.sci {
+  position: relative;
+  display: flex;
+  margin-top: 5px;
+}
+
+.sci li {
+  list-style: none;
+  margin: 4px;
+}
+
+.sci li a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 1.5em;
+  color: #444;
+  text-decoration: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: 0.5s;
+}
+
+.sci li a:hover {
+  background: #eb7c05;
+  color: #fff;
+}
+
+.content-section {
+  padding: 96px 0 101px 0;
+}
+
+.content-section .section-wrapper {
+  flex-direction: column;
+  gap: 34px;
+}
+.content-section .section-title {
+  font-size: 34px;
+  font-weight: 700;
+}
+.content-section .section-wrapper .article-list {
+  gap: 16px;
+}
+.content-section .section-wrapper .post {
+  flex-direction: column;
+  gap: 10px;
+}
+.content-section .section-wrapper .post .img-container {
+  position: relative;
+  width: 550px;
+  height: 550px;
+  background-color: var(--black1);
+  border-radius: 16px;
+  flex-grow: 1;
+  overflow: hidden;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  flex-direction: column;
+}
+.content-section .section-wrapper .post .img-container .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.content-section .container h2 {
+  color: #0e0d0d;
+  font-size: x-large;
+  font-weight: 800;
+  text-align: center;
+}
+.disabled-link {
+  cursor: default;
+  pointer-events: auto;
+  text-decoration: none;
+  color: rgb(235, 230, 230);
+}
+@media screen and (max-width: 1220px) {
+  .content-section .section-wrapper .section-title {
+    font-size: x-large;
+    align-self: center;
+  }
+
+  .content-section .section-wrapper .article-list .post .img-container {
+    width: 550px;
+    height: 550px;
+  }
+  .content-section .section-wrapper .article-list .post .img-container .img {
+    height: 100%;
+    width: 100%;
+  }
+  #about-title {
+    font-size: x-large;
+    font-weight: 500;
+  }
+}
+@media screen and (max-width: 1220px) {
+  .content-section .section-wrapper .section-title {
+    font-size: larger;
+    align-self: center;
+  }
+  .content-section .section-wrapper .article-list .post .img-container {
+    width: 480px;
+    height: 480px;
+  }
+  .content-section .section-wrapper .article-list .post .img-container .img {
+    height: 100%;
+    width: 100%;
+  }
+  #about-title {
+    font-size: xx-large;
+    font-weight: 500;
+  }
+}
+@media screen and (max-width: 1060px) {
+  .content-section .section-wrapper .section-title {
+    font-size: larger;
+    align-self: center;
+  }
+
+  .content-section .section-wrapper .article-list .post .img-container {
+    width: 420px;
+    height: 420px;
+  }
+  .content-section .section-wrapper .article-list .post .img-container .img {
+    height: 100%;
+    width: 100%;
+  }
+  #about-title {
+    font-size: xx-large;
+    font-weight: 500;
+  }
+}
+@media screen and (max-width: 992px) {
+  .content-section .section-wrapper .section-title {
+    font-size: larger;
+    align-self: center;
+  }
+
+  .content-section .section-wrapper .article-list .post .img-container {
+    width: 390px;
+    height: 390px;
+  }
+  .content-section .section-wrapper .article-list .post .img-container .img {
+    height: 100%;
+    width: 100%;
+  }
+  .footer .container .row {
+    gap: 10px;
+  }
+  #about-title {
+    font-size: xx-large;
+    font-weight: 500;
+  }
+  .footer h4 {
+    font-size: large;
+    font-weight: 500;
+  }
+  .footer .paragraph {
+    font-size: large;
+    font-weight: 400;
+  }
+  #mainNav #button-menu {
+    font-size: large;
+    font-weight: 500;
+  }
+  #home {
+    font-size: large;
+    font-weight: 500;
+  }
+  #contact {
+    font-size: large;
+    font-weight: 500;
+  }
+  #about {
+    font-size: large;
+    font-weight: 500;
+  }
+  #logo {
+    font-size: large;
+    font-weight: 500;
+  }
+  .content .detail h2 {
+    font-size: 3.2em;
+    font-weight: bolder;
+  }
+  .content .detail h2 span {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  .sci li a {
+    width: 65px;
+    height: 65px;
+    align-self: center;
+  }
+  .img-bx {
+    width: 200px;
+    height: 200px;
+  }
+  .img-bx img {
+    width: 140%;
+    height: 140%;
+  }
+}
+@media screen and (max-width: 892px) {
+  .content-section .section-wrapper .section-title {
+    font-size: larger;
+    align-self: center;
+  }
+
+  .content-section .section-wrapper .article-list .post .img-container {
+    width: 350px;
+    height: 350px;
+  }
+  .content-section .section-wrapper .article-list .post .img-container .img {
+    height: 100%;
+    width: 100%;
+  }
+  .footer .container .row {
+    gap: 10px;
+  }
+  #about-title {
+    font-size: xx-large;
+    font-weight: 500;
+  }
+  .footer h4 {
+    font-size: medium;
+    font-weight: 500;
+  }
+  .footer .paragraph {
+    font-size: medium;
+    font-weight: 400;
+  }
+  #mainNav #button-menu {
+    font-size: large;
+    font-weight: 500;
+  }
+  #home {
+    font-size: large;
+    font-weight: 500;
+  }
+  #contact {
+    font-size: large;
+    font-weight: 500;
+  }
+  #about {
+    font-size: large;
+    font-weight: 500;
+  }
+  #logo {
+    font-size: large;
+    font-weight: 500;
+  }
+  .content .detail h2 {
+    font-size: 3em;
+    font-weight: bolder;
+  }
+  .content .detail h2 span {
+    font-size: 0.9em;
+    font-weight: bold;
+  }
+  .sci li a {
+    width: 60px;
+    height: 60px;
+    align-self: center;
+  }
+  .img-bx {
+    width: 200px;
+    height: 200px;
+  }
+  .img-bx img {
+    width: 140%;
+    height: 140%;
+  }
+  #error_page h1 {
+    font-size: x-large;
+    font-weight: 500;
+  }
+  #error_page p {
+    font-size: medium;
+    font-weight: 100;
+  }
+  #error_page a {
+    font-size: medium;
+    font-weight: 100;
+  }
+  #error_page a > p {
+    font-size: medium;
+    font-weight: 100;
+  }
+}
+@media screen and (max-width: 790px) {
+  .content-section .section-wrapper .section-title {
+    font-size: larger;
+    align-self: center;
+  }
+  .content-section .section-wrapper .article-list {
+    gap: 15px;
+    flex-direction: column;
+  }
+  .content-section .section-wrapper .article-list .post .img-container {
+    width: 340px;
+    height: 340px;
+  }
+  .content-section .section-wrapper .article-list .post .img-container .img {
+    height: 100%;
+    width: 100%;
+  }
+  .footer .container .row {
+    gap: 10px;
+  }
+  #about-title {
+    font-size: x-large;
+    font-weight: 500;
+  }
+  .footer h4 {
+    font-size: medium;
+    font-weight: 500;
+  }
+  .footer .paragraph {
+    font-size: medium;
+    font-weight: 400;
+  }
+  #mainNav #button-menu {
+    font-size: large;
+    font-weight: 500;
+  }
+  #home {
+    font-size: large;
+    font-weight: 500;
+  }
+  #contact {
+    font-size: large;
+    font-weight: 500;
+  }
+  #about {
+    font-size: large;
+    font-weight: 500;
+  }
+  #logo {
+    font-size: large;
+    font-weight: 500;
+  }
+  .content .detail h2 {
+    font-size: 2.9em;
+    font-weight: bolder;
+  }
+  .content .detail h2 span {
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+  .sci li a {
+    width: 50px;
+    height: 50px;
+    align-self: center;
+  }
+  .img-bx {
+    width: 200px;
+    height: 200px;
+  }
+  .img-bx img {
+    width: 140%;
+    height: 140%;
+  }
+  #error_page h1 {
+    font-size: x-large;
+    font-weight: 500;
+  }
+  #error_page p {
+    font-size: medium;
+    font-weight: 100;
+  }
+  #error_page a {
+    font-size: medium;
+    font-weight: 100;
+  }
+  #error_page a > p {
+    font-size: medium;
+    font-weight: 100;
+  }
+}
+@media screen and (max-width: 576px) {
+  .content-section .section-wrapper .section-title {
+    font-size: larger;
+    align-self: center;
+  }
+  .content-section .section-wrapper .article-list {
+    gap: 15px;
+    flex-direction: column;
+  }
+  .content-section .section-wrapper .article-list .post .img-container {
+    width: 330px;
+    height: 330px;
+  }
+  .content-section .section-wrapper .article-list .post .img-container .img {
+    height: 100%;
+    width: 100%;
+  }
+  .footer .container .row {
+    gap: 11px;
+  }
+  #about-title {
+    font-size: large;
+    font-weight: 500;
+  }
+  .footer h4 {
+    font-size: medium;
+    font-weight: 500;
+  }
+  .footer .paragraph {
+    font-size: medium;
+    font-weight: 400;
+  }
+  #mainNav #button-menu {
+    font-size: large;
+    font-weight: 500;
+  }
+  #home {
+    font-size: large;
+    font-weight: 500;
+  }
+  #contact {
+    font-size: large;
+    font-weight: 500;
+  }
+  #about {
+    font-size: large;
+    font-weight: 500;
+  }
+  #logo {
+    font-size: large;
+    font-weight: 500;
+  }
+  .content .detail h2 {
+    font-size: 2.6em;
+    font-weight: bolder;
+  }
+  .content .detail h2 span {
+    font-size: 0.7em;
+    font-weight: bold;
+  }
+  .sci li a {
+    width: 40px;
+    height: 40px;
+    align-self: center;
+  }
+  .img-bx {
+    width: 180px;
+    height: 180px;
+  }
+  .img-bx img {
+    width: 140%;
+    height: 140%;
+  }
+  #error_page h1 {
+    font-size: x-large;
+    font-weight: 500;
+  }
+  #error_page p {
+    font-size: medium;
+    font-weight: 100;
+  }
+  #error_page a {
+    font-size: medium;
+    font-weight: 100;
+  }
+  #error_page a > p {
+    font-size: medium;
+    font-weight: 100;
+  }
+  section #about_text {
+    font-size: medium;
+    font-weight: 400;
+  }
+  #button_cv a {
+    font-size: medium;
+    font-weight: 400;
+  }
+}
+@media screen and (max-width: 490px) {
+  .content-section .section-wrapper .section-title {
+    font-size: large;
+    align-self: center;
+  }
+  .content-section .section-wrapper .article-list {
+    gap: 14px;
+    flex-direction: column;
+  }
+  .content-section .section-wrapper .article-list .post .img-container {
+    width: 300px;
+    height: 300px;
+  }
+  .content-section .section-wrapper .article-list .post .img-container .img {
+    height: 100%;
+    width: 100%;
+  }
+  .footer .container .row {
+    gap: 12px;
+  }
+  #about-title {
+    font-size: large;
+    font-weight: 500;
+  }
+  .footer h4 {
+    font-size: medium;
+    font-weight: 500;
+  }
+  .footer .paragraph {
+    font-size: medium;
+    font-weight: 400;
+  }
+  #mainNav #button-menu {
+    font-size: medium;
+    font-weight: 500;
+  }
+  #home {
+    font-size: medium;
+    font-weight: 500;
+  }
+  #contact {
+    font-size: medium;
+    font-weight: 500;
+  }
+  #about {
+    font-size: medium;
+    font-weight: 500;
+  }
+  #logo {
+    font-size: medium;
+    font-weight: 500;
+  }
+  .content .detail h2 {
+    font-size: 2.4em;
+    font-weight: bolder;
+  }
+  .content .detail h2 span {
+    font-size: 0.6em;
+    font-weight: bold;
+  }
+  .sci li a {
+    width: 30px;
+    height: 30px;
+    align-self: center;
+  }
+  .img-bx {
+    width: 160px;
+    height: 160px;
+  }
+  .img-bx img {
+    width: 140%;
+    height: 140%;
+  }
+  #error_page h1 {
+    font-size: x-large;
+    font-weight: 500;
+  }
+  #error_page p {
+    font-size: medium;
+    font-weight: 100;
+  }
+  #error_page a {
+    font-size: medium;
+    font-weight: 100;
+  }
+  #error_page a > p {
+    font-size: medium;
+    font-weight: 100;
+  }
+  section #about_text {
+    font-size: small;
+    font-weight: 400;
+  }
+  #button_cv a {
+    font-size: medium;
+    font-weight: 400;
+  }
+}
+@media screen and (max-width: 400px) {
+  .content-section .section-wrapper .section-title {
+    font-size: small;
+    align-self: center;
+  }
+  .content-section .section-wrapper .article-list {
+    gap: 10px;
+    flex-direction: column;
+  }
+  .content-section .section-wrapper .article-list .post .img-container {
+    width: 250px;
+    height: 250px;
+  }
+  .content-section .section-wrapper .article-list .post .img-container .img {
+    height: 100%;
+    width: 100%;
+  }
+  .footer .container .row {
+    gap: 13px;
+  }
+  #about-title {
+    font-size: large;
+    font-weight: 500;
+  }
+  .footer h4 {
+    font-size: medium;
+    font-weight: 500;
+  }
+  .footer .paragraph {
+    font-size: medium;
+    font-weight: 400;
+  }
+  #mainNav #button-menu {
+    font-size: medium;
+    font-weight: 500;
+  }
+  #home {
+    font-size: medium;
+    font-weight: 500;
+  }
+  #contact {
+    font-size: medium;
+    font-weight: 500;
+  }
+  #about {
+    font-size: medium;
+    font-weight: 500;
+  }
+  #logo {
+    font-size: medium;
+    font-weight: 500;
+  }
+  .content .detail h2 {
+    font-size: 2.2em;
+    font-weight: bolder;
+  }
+  .content .detail h2 span {
+    font-size: 0.6em;
+    font-weight: bold;
+  }
+  .sci li a {
+    width: 28px;
+    height: 28px;
+    align-self: center;
+  }
+  .img-bx {
+    width: 140px;
+    height: 140px;
+  }
+  .img-bx img {
+    width: 140%;
+    height: 140%;
+  }
+  #error_page h1 {
+    font-size: x-large;
+    font-weight: 500;
+  }
+  #error_page p {
+    font-size: medium;
+    font-weight: 200;
+  }
+  #error_page a {
+    font-size: medium;
+    font-weight: 200;
+  }
+  #error_page a > p {
+    font-size: medium;
+    font-weight: 200;
+  }
+  section #contact_title {
+    font-size: large;
+    font-weight: 500;
+  }
+  section #about_text {
+    font-size: smaller;
+    font-weight: 400;
+  }
+  #button_cv a {
+    font-size: smaller;
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .content-section .section-wrapper .section-title {
+    font-size: small;
+    align-self: center;
+  }
+  .content-section .section-wrapper .article-list {
+    gap: 8px;
+    flex-direction: column;
+  }
+  .content-section .section-wrapper .article-list .post .img-container {
+    width: 200px;
+    height: 200px;
+  }
+  .content-section .section-wrapper .article-list .post .img-container .img {
+    height: 100%;
+    width: 100%;
+  }
+  .footer .container .row {
+    gap: 14px;
+  }
+  #about-title {
+    font-size: large;
+    font-weight: 500;
+  }
+  .footer h4 {
+    font-size: small;
+    font-weight: 500;
+  }
+  .footer .paragraph {
+    font-size: small;
+    font-weight: 400;
+  }
+  #mainNav #button-menu {
+    font-size: small;
+    font-weight: 500;
+  }
+  #home {
+    font-size: small;
+    font-weight: 500;
+  }
+  #contact {
+    font-size: small;
+    font-weight: 500;
+  }
+  #about {
+    font-size: small;
+    font-weight: 500;
+  }
+  #logo {
+    font-size: medium;
+    font-weight: 500;
+  }
+  .content .detail h2 {
+    font-size: 2em;
+    font-weight: bolder;
+  }
+  .content .detail h2 span {
+    font-size: 0.6em;
+    font-weight: bold;
+  }
+  .sci li a {
+    width: 25px;
+    height: 25px;
+    align-self: center;
+  }
+  .img-bx {
+    width: 120px;
+    height: 120px;
+  }
+  .img-bx img {
+    width: 140%;
+    height: 140%;
+  }
+
+  #error_page h1 {
+    font-size: x-large;
+    font-weight: 500;
+  }
+  #error_page p {
+    font-size: medium;
+    font-weight: 100;
+  }
+  #error_page a {
+    font-size: medium;
+    font-weight: 100;
+  }
+  #error_page a > p {
+    font-size: medium;
+    font-weight: 100;
+  }
+  section #contact_title {
+    font-size: large;
+    font-weight: 500;
+  }
+  section #about_text {
+    font-size: smaller;
+    font-weight: 400;
+  }
+  #button_cv a {
+    font-size: smaller;
+    font-weight: 400;
+  }
+}
+@media screen and (max-width: 250px) {
+  .content-section .section-wrapper .section-title {
+    font-size: small;
+    align-self: center;
+  }
+  .content-section .section-wrapper .article-list {
+    gap: 8px;
+    flex-direction: column;
+  }
+  .content-section .section-wrapper .article-list .post .img-container {
+    width: 180px;
+    height: 180px;
+  }
+  .content-section .section-wrapper .article-list .post .img-container .img {
+    height: 100%;
+    width: 100%;
+  }
+  .footer .container .row {
+    gap: 15px;
+  }
+  #about-title {
+    font-size: large;
+    font-weight: 500;
+  }
+  .footer h4 {
+    font-size: small;
+    font-weight: 500;
+  }
+  .footer .paragraph {
+    font-size: small;
+    font-weight: 400;
+  }
+  #mainNav #button-menu {
+    font-size: small;
+    font-weight: 500;
+  }
+  #home {
+    font-size: small;
+    font-weight: 500;
+  }
+  #contact {
+    font-size: small;
+    font-weight: 500;
+  }
+  #about {
+    font-size: small;
+    font-weight: 500;
+  }
+  #logo {
+    font-size: medium;
+    font-weight: 500;
+  }
+  .content .detail h2 {
+    font-size: 1.8em;
+    font-weight: bolder;
+  }
+  .content .detail h2 span {
+    font-size: 0.6em;
+    font-weight: bold;
+  }
+  .sci li a {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+  }
+  .img-bx {
+    width: 100px;
+    height: 100px;
+  }
+  .img-bx img {
+    width: 140%;
+    height: 140%;
+  }
+
+  #error_page h1 {
+    font-size: x-large;
+    font-weight: 500;
+  }
+  #error_page p {
+    font-size: medium;
+    font-weight: 100;
+  }
+  #error_page a {
+    font-size: medium;
+    font-weight: 100;
+  }
+  #error_page a > p {
+    font-size: medium;
+    font-weight: 100;
+  }
+  section #contact_title {
+    font-size: large;
+    font-weight: 500;
+  }
+  section #about_text {
+    font-size: smaller;
+    font-weight: 400;
+  }
+  #button_cv a {
+    font-size: smaller;
+    font-weight: 400;
+  }
+}
