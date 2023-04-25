@@ -32,6 +32,8 @@ from flask_mail import Message
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired, Length
+from project import csrf
+
 
 key_random = {}
 
@@ -113,6 +115,7 @@ def download(filename):
 
 # create a routing send_email page
 @app.route("/contact/send_email", methods=["GET", "POST"])
+@csrf.exempt
 def send_email():
     #    load the key
     #    key = key_random.get('key1')
