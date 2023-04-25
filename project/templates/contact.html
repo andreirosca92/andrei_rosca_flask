@@ -13,7 +13,7 @@
     <br />
     <!-- Contact Section Form-->
     <div clas="p-2 m-2 bg-white text-dark">
-        {{ render_form(form) }}
+        {{ render_form(form, action="/contact", method="POST", button_map={'edit_button': 'primary'}) }}
     <div>
     
 
