@@ -112,18 +112,18 @@ def download(filename):
 
 
 # create a routing send_email page
-@app.route("/send_email", methods=["GET", "POST"])
+@app.route("/contact/send_email", methods=["GET", "POST"])
 def send_email():
-    # load the key
+    #    load the key
     #    key = key_random.get('key1')
     #    fernet = Fernet(key)
     #    # decrypt the message
     #    message=fernet.decrypt(message_hash).decode()
     #    # decrypt the name
     #    name=fernet.decrypt(name_hash).decode()
-    # destroying temporary key
-    name = key_random.keys()
-    message = key_random[name]
+    #    destroying temporary key
+    for key, value in key_random.items():
+        name, message = key, value
     key_random.clear()
 
     # render send_email page
@@ -132,4 +132,4 @@ def send_email():
 
 if __name__ == "__main__":
     # run the app
-    app.run(debug=False)
+    app.run(debug=True)
