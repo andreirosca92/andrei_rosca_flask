@@ -33,7 +33,8 @@
       <div class="p-2 my-5 d-flex justify-content-center">
         <div class="btn-example">
               <!-- About Section Button-->
-            <button id="button_cv"type="button" class="btn btn-primary"><a class="label label-primary disabled-link" href={{url_for('static',filename="/pdf/Andrei_Rosca_CV.pdf")}} target="_blank"  style="margin-right: 5px;">Download my CV</a></button>
+           
+            <a id="button_cv" href={{url_for('static',filename="/pdf/Andrei_Rosca_CV.pdf")}} class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Download my CV</a>
           
         </div>
       </div>
