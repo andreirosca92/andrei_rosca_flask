@@ -56,8 +56,8 @@ main {
 }
 
 .img-bx {
-  width: 250px;
-  height: 250px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   position: relative;
   overflow: hidden;
@@ -68,8 +68,9 @@ main {
 }
 .img-bx img {
   object-fit: contain;
-  width: 140%;
-  height: 140%;
+  object-position: 50%;
+  width: 137%;
+  height: 137%;
   position: absolute;
   left: 50%;
   top: 50%;
