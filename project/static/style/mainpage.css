@@ -157,6 +157,7 @@ main {
 }
 .content-section .section-wrapper .article-list {
   gap: 16px;
+  flex-wrap: wrap;
 }
 .content-section .section-wrapper .post {
   flex-direction: column;
